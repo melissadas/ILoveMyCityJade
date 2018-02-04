@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title=pageTitle
+    include partials/titlepartial.jade
+    style.
+      h3.headerFont{
+      font-family: advent-pro, sans-serif;
+      font-size: 30px;
+      }
+  body
+   include partials/scripts.jade
+   include partials/menu.jade
+    h3.headerFont(align='center')=title
+    br
+    br
+    .container
+      .row
+        #myCarousel.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+          .carousel-inner
+            .item.active
+              img(src='/images/Goa.jpg', alt='Goa', align='center', style='width:100%;')
+            .item
+              img(src='/images/Mussoorie.jpg', alt='Musoorie', align='center', style='width:100%;')
+            .item
+              img(src='/images/Jaipur.jpg', alt='Jaipur', align='center', style='width:100%;')
+          a.left.carousel-control(href='#myCarousel', data-slide='prev')
+            span.glyphicon.glyphicon-chevron-left
+            span.sr-only Previous
+          a.right.carousel-control(href='#myCarousel', data-slide='next')
+            span.glyphicon.glyphicon-chevron-right
+            span.sr-only Next

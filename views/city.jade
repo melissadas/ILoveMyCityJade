@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title=city
+    include partials/titlepartial.jade
+    style.
+      h3.headerFont{
+      font-family: advent-pro, sans-serif;
+      font-size: 30px;
+      }
+      img.img-size{
+      height: 200px;
+      width: 800px;
+      }
+  body
+  include partials/scripts.jade
+  include partials/menu.jade
+    h3.headerFont(align='center') #{title} : #{cityHeading}
+    br
+    br
+    .container
+      .row
+        - for (var i = 1; i <= images; i++)
+          .col-xs-6
+            .thumbnail
+               img.img-size(src='/images/'+title+'/'+title+'-'+i+'.jpg', alt='city image')
+
